@@ -1,0 +1,6 @@
+{
+  "name": "Clear Vision Eye Hospital",
+  "description": "Premium private ophthalmology clinic and micro-surgery center led by Dr. Arjun Sharma, specializing in advanced cataracts, laser SMILE, and customized glass-free vision solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
