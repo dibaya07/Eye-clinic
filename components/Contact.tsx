@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { clinic } from '@/data/doctorData';
-import { MapPin, Phone, Mail, Clock, AlertCircle, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Clock, AlertCircle, ExternalLink } from 'lucide-react';
+import SocialLinks from './SocialLinks';
 
-export default function ClinicInfo() {
+export default function Contact() {
   return (
     <section 
-      id="clinic-info" 
+      id="contact" 
       className="py-20 bg-white relative z-20"
       aria-labelledby="clinic-heading"
     >
@@ -87,6 +88,8 @@ export default function ClinicInfo() {
                   </li>
                 </ul>
               </div>
+              {/* Social Links */}
+              <SocialLinks/>
 
             </div>
 
@@ -141,3 +144,6 @@ export default function ClinicInfo() {
     </section>
   );
 }
+
+
+

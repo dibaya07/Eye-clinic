@@ -19,23 +19,23 @@ export default function TestimonialsSection() {
             <Heart className="w-4 h-4 text-medical-600 animate-pulse" />
             <span>Patient Gratitude</span>
           </div>
-          <h2 id="reviews-heading" className="text-3xl sm:text-4xl font-display font-bold text-slate-900 tracking-tight">
-            Regaining Sight: In Our Patients' Own Words
+          <h2 id="reviews-heading" className="text-2xl sm:text-4xl font-display font-bold text-slate-900 tracking-tight">
+            Regaining Sight: In Our Patients&apos; Own Words
           </h2>
-          <p className="text-slate-500 mt-4 leading-relaxed text-sm">
+          <p className="text-slate-500 mt-4 leading-relaxed text-xs sm:text-sm">
             Read transparent, real-world visual recovery stories from retired officials, corporate professionals, and medical experts.
           </p>
         </div>
 
         {/* Testimonials Grid (3 columns on desktop, responsive layout) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex overflow-x-scroll hide-scrollbar gap-8">
           {testimonials.map((test) => (
             <div 
               key={test.id} 
-              className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between relative group"
+              className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between relative group "
             >
               {/* Content area */}
-              <div>
+              <div className='w-[65vw] sm:w-[35vw] lg:w-[25vw]'>
                 {/* Floating Quotation icon */}
                 <div className="absolute top-6 right-6 text-slate-200 group-hover:text-medical-100 transition duration-300">
                   <Quote className="w-8 h-8 rotate-180 fill-current" />
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
 
                 {/* Review Text */}
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-normal italic">
-                  "{test.review}"
+                  &quot;{test.review}&quot;
                 </p>
               </div>
 
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
 
         {/* Secondary clinic rating callout */}
         <div className="mt-16 text-center">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest flex items-center justify-center gap-1.5">
+          <p className="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase tracking-widest flex flex-wrap sm:flex-nowrap items-center justify-center gap-2.5">
             <span>Overall Verified Quality Score:</span>
             <span className="text-slate-800 font-bold">4.9 / 5.0</span>
             <span className="flex text-amber-400 gap-0.5">

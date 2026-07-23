@@ -7,11 +7,10 @@ import { clinic } from '@/data/doctorData';
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Conditions', href: '#conditions' },
-  { label: 'Technology', href: '#technology' },
-  { label: 'Reviews', href: '#reviews' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Appointment', href: '#appointment' },
+  { label: 'Reviews', href: '#reviews' },
 ];
 
 export default function Navbar() {
@@ -58,11 +57,7 @@ export default function Navbar() {
       if (sec) observer.observe(sec);
     });
 
-    return () => {
-      sections.forEach(sec => {
-        if (sec) observer.unobserve(sec);
-      });
-    };
+    return () => observer.disconnect();
   }, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -164,8 +159,8 @@ export default function Navbar() {
             </a>
             
             <a
-              href="#appointment"
-              onClick={(e) => handleLinkClick(e, '#appointment')}
+              href="#contact"
+              onClick={(e) => handleLinkClick(e, '#contact')}
               className="bg-medical-700 hover:bg-medical-800 text-white text-xs font-semibold rounded-full py-2 px-5 shadow-sm hover:shadow transition duration-200 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-medical-600 focus:ring-offset-2"
             >
               <Calendar className="w-3.5 h-3.5" />
@@ -256,8 +251,8 @@ export default function Navbar() {
                 <span>Call {clinic.phone}</span>
               </a>
               <a 
-                href="#appointment"
-                onClick={(e) => handleLinkClick(e, '#appointment')}
+                href="#contact"
+                onClick={(e) => handleLinkClick(e, '#contact')}
                 className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-full bg-medical-700 text-white font-semibold text-sm hover:bg-medical-800 transition shadow"
               >
                 <Calendar className="w-4 h-4" />

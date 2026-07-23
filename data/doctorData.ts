@@ -5,7 +5,7 @@ export interface HeroData {
   doctorName: string;
   doctorTitle: string;
   doctorQualifications: string;
-  doctorImage: string;
+  // doctorImage: string;
   ctaBook: string;
   ctaWhatsapp: string;
   ctaCall: string;
@@ -17,6 +17,7 @@ export interface DoctorData {
   qualifications: string;
   role: string;
   experience: string;
+  short_biography: string;
   biography: string;
   specializations: string[];
   consultationFee: string;
@@ -118,12 +119,13 @@ export interface SocialLinks {
 export const hero: HeroData = {
   badge: "Premium Eye Care Experience",
   title: "Restoring Clarity to Your World with Clinical Precision",
+  // title: "Your Vision, Our Precision",
   subtitle: "Clear Vision Eye Hospital offers premium micro-surgical ophthalmology treatments. Led by senior consultant Dr. Arjun Sharma, we combine fifteen years of surgical mastery with the world's most advanced laser diagnostic systems.",
   doctorName: "Dr. Arjun Sharma",
   doctorTitle: "Chief Consultant Eye Specialist & Cataract Surgeon",
   doctorQualifications: "MBBS, MS (Ophthalmology)",
-  doctorImage: "https://picsum.photos/seed/doctor_hero_portrait/650/800",
-  ctaBook: "Book Consultation",
+  // doctorImage: "https://picsum.photos/seed/doctor_hero_portrait/650/800",
+  ctaBook: "Book Appointment",
   ctaWhatsapp: "Chat on WhatsApp",
   ctaCall: "Call Now",
   emergencyNotice: "24/7 Eye Trauma & Emergency Referral Helpline: +91 98765 43210"
@@ -134,6 +136,7 @@ export const doctor: DoctorData = {
   qualifications: "MBBS, MS (Ophthalmology)",
   role: "Founder & Chief Ophthalmic Surgeon",
   experience: "15+ Years of Clinical Excellence",
+  short_biography: "Dr. Arjun Sharma is a nationally recognized micro-incision cataract and refractive surgeon with over 15 years of surgical excellence in premier private",
   biography: "Dr. Arjun Sharma is a nationally recognized micro-incision cataract and refractive surgeon with over 15 years of surgical excellence in premier private hospitals. Having completed his medical training and postgraduate degree in Ophthalmology from leading national universities, he pursued advanced clinical fellowships in premium Intraocular Lens (IOL) micro-implants and computer-guided glaucoma interventions. Dr. Sharma has pioneered seamless, stitchless phacoemulsification techniques, performing more than 8,500 successful eye surgeries with a near-perfect safety record. He remains committed to raising the standard of premium, individualized vision care in India.",
   specializations: [
     "Micro-incision Cataract Surgery (MICS / Phaco)",
