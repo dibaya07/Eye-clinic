@@ -1,7 +1,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Calendar, Phone, Award, ShieldAlert, MessageCircle } from "lucide-react";
+import { Phone, Award, ShieldAlert, MessageCircle } from "lucide-react";
 import { hero, clinic } from "@/data/doctorData";
 import AppointmentBtn from "./AppointmentBtn";
 

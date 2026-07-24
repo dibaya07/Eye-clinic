@@ -10,6 +10,7 @@ import {
   Heart,
   ChevronRight,
   Scale,
+  HeartIcon,
 } from "lucide-react";
 
 export default function Footer() {
@@ -36,9 +37,9 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-16 pb-12 border-b border-slate-800">
+        <div className="flex flex-col sm:flex-row gap-10 lg:gap-16 pb-12 border-b border-slate-800">
           {/* Col 1: Brand details (4 cols) */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className=" w-full sm:w-[40%]">
             <div className="flex items-center gap-2.5">
               <div className="bg-medical-700/20 p-2.5 rounded-xl text-medical-500 border border-medical-800">
                 <Eye className="w-5 h-5" />
@@ -194,6 +195,15 @@ export default function Footer() {
               className="hover:underline"
             >
               Patient Rights
+            </a>
+            <a
+              href="https://dibaya.co.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline flex justify-center items-center"
+            >
+              Developed by Dibaya{" "}
+              <HeartIcon className="text-red-700 h-3 w-3 fill-red-600" />
             </a>
           </div>
         </div>

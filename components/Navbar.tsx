@@ -159,8 +159,8 @@ export default function Navbar() {
             </a>
             
             <a
-              href="#contact"
-              onClick={(e) => handleLinkClick(e, '#contact')}
+              href="#appointment"
+              onClick={(e) => handleLinkClick(e, '#appointment')}
               className="bg-medical-700 hover:bg-medical-800 text-white text-xs font-semibold rounded-full py-2 px-5 shadow-sm hover:shadow transition duration-200 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-medical-600 focus:ring-offset-2"
             >
               <Calendar className="w-3.5 h-3.5" />

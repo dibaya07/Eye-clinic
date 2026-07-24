@@ -52,7 +52,7 @@ export default function FloatingActions() {
       </a>
 
       <a
-        href={clinic.whatsapp}
+        href={`https://wa.me/916026981325?text=${"Hello"}`}
         target="_blank"
         rel="noopener noreferrer"
         className="bg-emerald-600 hover:bg-emerald-700 text-white p-4.5 rounded-full shadow-xl transition duration-300 flex items-center justify-center hover:scale-103 focus:outline-none focus:ring-2 focus:ring-emerald-600 relative overflow-hidden group"

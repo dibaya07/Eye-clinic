@@ -47,13 +47,13 @@ export interface ConditionItem {
   treatments: string;
 }
 
-export interface EquipmentItem {
-  id: string;
-  name: string;
-  description: string;
-  benefit: string;
-  image: string;
-}
+// export interface EquipmentItem {
+//   id: string;
+//   name: string;
+//   description: string;
+//   benefit: string;
+//   image: string;
+// }
 
 export interface ProcessStep {
   step: string;
@@ -78,11 +78,11 @@ export interface GalleryItem {
   image: string;
 }
 
-export interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
-}
+// export interface FAQItem {
+//   id: string;
+//   question: string;
+//   answer: string;
+// }
 
 export interface ClinicData {
   name: string;
@@ -320,36 +320,36 @@ export const conditions: ConditionItem[] = [
   }
 ];
 
-export const equipment: EquipmentItem[] = [
-  {
-    id: "eq-digital-exam",
-    name: "Digital Slit Lamp & Vision Profiler",
-    description: "High-definition optical microscope with integrated digital capture to analyze ocular anterior segments with micro-millimeter precision.",
-    benefit: "Allows patients to see their own eye conditions on-screen, boosting visual understanding and accurate diagnostic mapping.",
-    image: "https://picsum.photos/seed/slitlamp/600/400"
-  },
-  {
-    id: "eq-oct-scan",
-    name: "Optical Coherence Tomography (OCT Scan)",
-    description: "Ultra-advanced non-invasive 3D imaging technology that captures cross-sectional micro-layers of the retina and optic nerve heads.",
-    benefit: "Detects glaucoma, macular degeneration, and diabetic retinopathy months before standard visual symptoms appear.",
-    image: "https://picsum.photos/seed/octscan/600/400"
-  },
-  {
-    id: "eq-fundus-camera",
-    name: "Digital Retinal Fundus Camera",
-    description: "High-resolution wide-field imaging system designed to capture full-color records of the central and peripheral retinal layers.",
-    benefit: "Creates clear, permanent visual history records to accurately track subtle vascular or macular shifts over time.",
-    image: "https://picsum.photos/seed/funduscamera/600/400"
-  },
-  {
-    id: "eq-auto-refractor",
-    name: "Computerized Auto Refractometer",
-    description: "Advanced diagnostic laser device measuring visual light-bending capability in fractions of a second.",
-    benefit: "Provides an incredibly fast, precise, and completely objective baseline for custom contact lens and glass prescriptions.",
-    image: "https://picsum.photos/seed/autorefractor/600/400"
-  }
-];
+// export const equipment: EquipmentItem[] = [
+//   {
+//     id: "eq-digital-exam",
+//     name: "Digital Slit Lamp & Vision Profiler",
+//     description: "High-definition optical microscope with integrated digital capture to analyze ocular anterior segments with micro-millimeter precision.",
+//     benefit: "Allows patients to see their own eye conditions on-screen, boosting visual understanding and accurate diagnostic mapping.",
+//     image: "https://picsum.photos/seed/slitlamp/600/400"
+//   },
+//   {
+//     id: "eq-oct-scan",
+//     name: "Optical Coherence Tomography (OCT Scan)",
+//     description: "Ultra-advanced non-invasive 3D imaging technology that captures cross-sectional micro-layers of the retina and optic nerve heads.",
+//     benefit: "Detects glaucoma, macular degeneration, and diabetic retinopathy months before standard visual symptoms appear.",
+//     image: "https://picsum.photos/seed/octscan/600/400"
+//   },
+//   {
+//     id: "eq-fundus-camera",
+//     name: "Digital Retinal Fundus Camera",
+//     description: "High-resolution wide-field imaging system designed to capture full-color records of the central and peripheral retinal layers.",
+//     benefit: "Creates clear, permanent visual history records to accurately track subtle vascular or macular shifts over time.",
+//     image: "https://picsum.photos/seed/funduscamera/600/400"
+//   },
+//   {
+//     id: "eq-auto-refractor",
+//     name: "Computerized Auto Refractometer",
+//     description: "Advanced diagnostic laser device measuring visual light-bending capability in fractions of a second.",
+//     benefit: "Provides an incredibly fast, precise, and completely objective baseline for custom contact lens and glass prescriptions.",
+//     image: "https://picsum.photos/seed/autorefractor/600/400"
+//   }
+// ];
 
 export const process: ProcessStep[] = [
   {
@@ -414,67 +414,67 @@ export const gallery: GalleryItem[] = [
     id: "gal-1",
     title: "Ultra-Modern Diagnostic Suite",
     category: "Diagnostics",
-    image: "https://picsum.photos/seed/clinic_suite/800/600"
+    image: "/img1.webp"
   },
   {
     id: "gal-2",
     title: "Micro-Surgical Operation Theater (OT)",
     category: "Surgical Care",
-    image: "https://picsum.photos/seed/operatingtheater/800/600"
+    image: "/img2.webp"
   },
   {
     id: "gal-3",
     title: "Premium Patient consultation Lounge",
     category: "Patient Comfort",
-    image: "https://picsum.photos/seed/consultlounge/800/600"
+    image: "/img3.jpeg"
   },
   {
     id: "gal-4",
     title: "Advanced Slit Lamp Evaluation Lab",
     category: "Diagnostics",
-    image: "https://picsum.photos/seed/slitlamplab/800/600"
+    image: "/img4.webp"
   },
   {
     id: "gal-5",
     title: "Spacious Hospitality Reception Center",
     category: "Hospitality",
-    image: "https://picsum.photos/seed/receptioncenter/800/600"
+    image: "/img5.jpeg"
   },
-  {
-    id: "gal-6",
-    title: "Comprehensive Optics & Lens Studio",
-    category: "Optics",
-    image: "https://picsum.photos/seed/opticsstudio/800/600"
-  }
+  // {
+  //   id: "gal-6",
+  //   title: "Comprehensive Optics & Lens Studio",
+  //   category: "Optics",
+  //   image: "/img2.webp"
+  // }
 ];
 
-export const faq: FAQItem[] = [
-  {
-    id: "faq-1",
-    question: "How long does a modern Cataract surgery take and is it painful?",
-    answer: "A modern Micro-incision Cataract Surgery (MICS) at our hospital takes just 10 to 15 minutes. It is performed under high-quality numbing anesthetic eye drops—so there are absolutely no injections, no stitches, and no pain. Most patients walk home within an hour of surgery."
-  },
-  {
-    id: "faq-2",
-    question: "Do you charge extra for premium Intraocular Lenses (IOL) like Multifocal or Toric?",
-    answer: "Our basic ₹500 consultation fee covers Dr. Arjun Sharma's full evaluation. If cataract surgery is indicated, the cost depends strictly on the premium foldable lens you choose (Monofocal, Multifocal, or Astigmatism-correcting Toric). We provide clear, transparent counseling without any hidden charges."
-  },
-  {
-    id: "faq-3",
-    question: "What is your consultation fee and do I need a prior appointment?",
-    answer: "Our standard consultation fee is ₹500. While we do accept walk-in patients for emergencies, we strongly advise booking a prior appointment online, over phone, or via WhatsApp. This helps us ensure that your wait time is minimal and we can allocate sufficient time for your complete diagnostics."
-  },
-  {
-    id: "faq-4",
-    question: "Do you support cashless treatments with medical insurance/TPA policies?",
-    answer: "Yes, Clear Vision Eye Hospital is fully empaneled with all major medical insurance providers, corporate TPAs, and government healthcare schemes. Our dedicated insurance desk will manage all authorization paperwork for you to ensure a stress-free cashless surgical experience."
-  },
-  {
-    id: "faq-5",
-    question: "How frequently should I get my eyes checked if I use screens heavily?",
-    answer: "For software engineers, digital creators, and heavy screen users, we recommend a comprehensive visual profiling and dry-eye checkup once every year. If you experience burning sensations, redness, or headaches, you should schedule a checkup immediately to prevent ocular strain."
-  }
-];
+// export const faq: FAQItem[] = [
+//   {
+//     id: "faq-1",
+//     question: "How long does a modern Cataract surgery take and is it painful?",
+//     answer: "A modern Micro-incision Cataract Surgery (MICS) at our hospital takes just 10 to 15 minutes. It is performed under high-quality numbing anesthetic eye drops—so there are absolutely no injections, no stitches, and no pain. Most patients walk home within an hour of surgery."
+//   },
+//   {
+//     id: "faq-2",
+//     question: "Do you charge extra for premium Intraocular Lenses (IOL) like Multifocal or Toric?",
+//     answer: "Our basic ₹500 consultation fee covers Dr. Arjun Sharma's full evaluation. If cataract surgery is indicated, the cost depends strictly on the premium foldable lens you choose (Monofocal, Multifocal, or Astigmatism-correcting Toric). We provide clear, transparent counseling without any hidden charges."
+//   },
+//   {
+//     id: "faq-3",
+//     question: "What is your consultation fee and do I need a prior appointment?",
+//     answer: "Our standard consultation fee is ₹500. While we do accept walk-in patients for emergencies, we strongly advise booking a prior appointment online, over phone, or via WhatsApp. This helps us ensure that your wait time is minimal and we can allocate sufficient time for your complete diagnostics."
+//   },
+//   {
+//     id: "faq-4",
+//     question: "Do you support cashless treatments with medical insurance/TPA policies?",
+//     answer: "Yes, Clear Vision Eye Hospital is fully empaneled with all major medical insurance providers, corporate TPAs, and government healthcare schemes. Our dedicated insurance desk will manage all authorization paperwork for you to ensure a stress-free cashless surgical experience."
+//   },
+//   {
+//     id: "faq-5",
+//     question: "How frequently should I get my eyes checked if I use screens heavily?",
+//     answer: "For software engineers, digital creators, and heavy screen users, we recommend a comprehensive visual profiling and dry-eye checkup once every year. If you experience burning sensations, redness, or headaches, you should schedule a checkup immediately to prevent ocular strain."
+//   }
+// ];
 
 export const clinic: ClinicData = {
   name: "Clear Vision Eye Hospital",

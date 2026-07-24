@@ -8,17 +8,41 @@ import {
   Send,
   AlertTriangle,
   X,
+  AlertCircle,
 } from "lucide-react";
 
 export default function Appointment() {
+
+   const getAppointmentDate = () => {
+    const date = new Date();
+
+    // After 6 PM, move to next day
+    if (date.getHours() >= 18) {
+      date.setDate(date.getDate() + 1);
+    }
+
+    // Skip Sunday
+    if (date.getDay() === 0) {
+      date.setDate(date.getDate() + 1);
+    }
+
+    return date.toLocaleDateString("en-IN");;
+    // return date.toISOString().split("T")[0];
+  };
+
+
+
   const [formData, setFormData] = useState({
     name: "",
     mobile_no: "",
     address: "",
+    date: getAppointmentDate(),
   });
 
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+ 
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -61,10 +85,11 @@ export default function Appointment() {
     setIsSubmitting(true);
 
     const message = `
-    Name: ${formData.name}
-    Mobile: ${formData.mobile_no}
-    Address: ${formData.address}
-      `;
+        Name: ${formData.name} 
+        Mobile: ${formData.mobile_no} 
+        Address: ${formData.address}
+        date: ${formData.date}
+        `;
 
     const encodedMessage = encodeURIComponent(message);
 
@@ -75,6 +100,7 @@ export default function Appointment() {
         name: "",
         mobile_no: "",
         address: "",
+        date: getAppointmentDate()
       });
     }, 1000);
   };
@@ -125,7 +151,6 @@ export default function Appointment() {
             )}
           </div>
 
-          {/* Email input */}
           <div className="space-y-1.5">
             <label
               htmlFor="contact-email"
@@ -134,7 +159,10 @@ export default function Appointment() {
               Mobile No
             </label>
             <input
-              type="number"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              maxLength={10}
               id="contact-email"
               name="mobile_no"
               placeholder="Enter Your Mobile no"
@@ -180,6 +208,26 @@ export default function Appointment() {
                 <span>{formErrors.address}</span>
               </p>
             )}
+          </div>
+
+          <div className="space-y-1.5">
+            <label
+              htmlFor="contact-date"
+              className="block text-xs font-bold text-slate-600 uppercase tracking-wide"
+            >
+              Appointment Date
+            </label>
+            <input
+              id="contact-date"
+              name="date"
+              value={formData.date}
+              readOnly
+              className={`w-full bg-slate-50  rounded-xl py-2.5 px-4 text-xs font-semibold outline-none`}
+            />
+              <p className="text-[10px] font-bold text-gray-500 flex items-center gap-1">
+                <AlertCircle className="w-3 h-3"/>
+                <span>Take appointment before 1 PM</span>
+              </p>
           </div>
 
           {/* Submit btn */}
